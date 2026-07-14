@@ -1,0 +1,22 @@
+[
+  {
+    "value": "Buyurtmam qachon yetkaziladi?",
+    "description": "Buyurtmangiz tasdiqlangandan so'ng odatda 2-5 ish kuni ichida manzilingizga yetkazib beriladi. Yetkazib berish muddati sizning hududingiz va tanlangan yetkazib berish usuliga qarab farq qilishi mumkin."
+  },
+  {
+    "value": "Mahsulotni qanday qaytarishim mumkin?",
+    "description": "Mahsulotni qabul qilib olgan kundan boshlab 14 kun ichida, agar u kiyilmagan, yorliqlari saqlangan va original holatida bo'lsa, bepul qaytarishingiz mumkin. Buning uchun 'Buyurtmalarim' bo'limidan qaytarish so'rovini yuborishingiz kifoya."
+  },
+  {
+    "value": "O'lchamni qanday to'g'ri tanlash mumkin?",
+    "description": "Har bir mahsulot sahifasida batafsil o'lcham jadvali mavjud. Ko'krak, bel va bo'y uzunligingizni o'lchab, jadval bilan solishtirib ko'ring. Ikki o'lcham orasida ikkilanayotgan bo'lsangiz, kattaroq o'lchamni tanlashni tavsiya qilamiz."
+  },
+  {
+    "value": "Qanday to'lov usullari mavjud?",
+    "description": "Uzcard, Humo bank kartalari, shuningdek naqd pul orqali (yetkazib berish vaqtida) to'lov qilishingiz mumkin. Barcha to'lovlar xavfsiz va shifrlangan tizim orqali amalga oshiriladi."
+  },
+  {
+    "value": "Buyurtmamni qanday kuzatib borishim mumkin?",
+    "description": "Buyurtma tasdiqlangach, sizga SMS va profilingiz orqali kuzatuv raqami yuboriladi. 'Buyurtmalarim' bo'limida buyurtmangizning joriy holatini real vaqt rejimida ko'rishingiz mumkin."
+  }
+]

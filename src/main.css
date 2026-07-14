@@ -1,0 +1,82 @@
+:root {
+  --mantine-color-brand-1: #000000;
+  --mantine-color-brand-2: #f9f9f9;
+  --mantine-color-brand-3: #ff99bb;
+  --mantine-color-brand-4: #ff73a1;
+  --mantine-color-brand-5: #ff4d87;
+  --mantine-color-brand-6: #e63370;
+  --mantine-color-brand-7: #cc005c;
+  --mantine-color-brand-8: #a30041;
+  --mantine-color-brand-9: #7a0031;
+  --mantine-color-brand-10: #520021;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fafafa;
+}
+
+.navlinks_header.active p {
+  border-bottom: 2px solid var(--mantine-color-brand-7);
+  padding-bottom: 4px;
+  color: var(--mantine-color-brand-7) !important;
+  font-weight: 600;
+}
+
+.navlinks_header {
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.navlinks_header:hover p {
+  color: var(--mantine-color-brand-6) !important;
+}
+
+.mantine-Button-root:hover {
+  background-color: var(--mantine-color-brand-4) !important;
+  color: white !important;
+}
+
+.product-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.section-title {
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: var(--mantine-color-brand-6);
+  border-radius: 2px;
+}
+
+.category-card {
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.category-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1);
+  border-color: var(--mantine-color-brand-3);
+}

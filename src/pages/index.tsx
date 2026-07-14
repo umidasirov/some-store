@@ -1,0 +1,6 @@
+export { HomePage as Home } from './HomePage'
+export { Aboutus as Aboutus } from './aboutus'
+export { Details as Details } from './details'
+export { NotFoundPage as NotFoundPage } from './NotFoundPage'
+export { Products as Products } from './products'
+export { Contact as Contact } from './contact'
