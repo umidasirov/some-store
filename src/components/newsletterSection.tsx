@@ -77,7 +77,7 @@ export function NewsletterSection() {
           px={{ base: 30, md: 80 }}
           style={{ borderRadius: '40px' }}
         >
-          <Grid gutter="xl" align="center">
+          <Grid align="center">
             <Grid.Col span={{ base: 12, md: 6 }}>
               <Title order={3} size={28} c="dark" mb={12}>
                 Yangi to'plamlardan xabardor bo'ling

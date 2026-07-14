@@ -85,7 +85,6 @@ export default function Footer() {
                 c="gray.5"
                 size="sm"
                 style={{ cursor: 'pointer' }}
-                _hover={{ color: 'brand.5' }}
               >
                 Bosh sahifa
               </Text>
