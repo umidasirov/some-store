@@ -8,12 +8,12 @@ import {
   ActionIcon,
   Flex,
 } from '@mantine/core'
-import type { prioductType } from '../types/productTypes'
 import { RiShoppingCartLine, RiUpload2Line } from '@remixicon/react'
 import { useNavigate } from 'react-router'
+import type { IProduct } from '../types/product'
 
 interface ProductCardProps {
-  product: prioductType
+  product: IProduct
 }
 
 export function ProductCard({ product }: ProductCardProps) {

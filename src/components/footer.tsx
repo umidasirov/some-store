@@ -81,11 +81,7 @@ export default function Footer() {
             </Text>
 
             <Link to="/" style={{ textDecoration: 'none' }}>
-              <Text
-                c="gray.5"
-                size="sm"
-                style={{ cursor: 'pointer' }}
-              >
+              <Text c="gray.5" size="sm" style={{ cursor: 'pointer' }}>
                 Bosh sahifa
               </Text>
             </Link>

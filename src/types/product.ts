@@ -1,0 +1,28 @@
+export interface ICategory {
+  id: number
+  name: string
+  slug: string
+  icon: string
+}
+export interface IProduct {
+  id: number
+  title: string
+  slug: string
+  price: number
+  description: string
+  category: ICategory
+  images: string[]
+}
+
+export interface ICommonParams {
+  page?: string
+  size?: string
+  search?: string
+}
+
+export type TProductParams = ICommonParams & {
+  categoryId?: number
+  price_min?: number
+  price_max?: number
+  title?: string
+}

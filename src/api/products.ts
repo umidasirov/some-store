@@ -1,0 +1,24 @@
+import type {
+  ICategory,
+  ICommonParams,
+  IProduct,
+  TProductParams,
+} from '../types/product'
+import { $api } from './api'
+
+const baseURL = '/products'
+
+export const productsApi = {
+  get: (params?: ICommonParams) => $api.get<IProduct[]>(baseURL, { params }),
+  getFiltered: (params?: TProductParams) =>
+    $api.get<IProduct[]>(baseURL, { params }),
+  getById: (id: IProduct['id']) => $api.get<IProduct>(`${baseURL}/${id}`),
+  create: (data: Partial<IProduct>) => $api.post<IProduct>(baseURL, data),
+  update: (id: IProduct['id'], data: Partial<IProduct>) =>
+    $api.put<IProduct>(`${baseURL}/${id}`, data),
+  delete: (id: IProduct['id']) => $api.delete(`${baseURL}/${id}`),
+}
+
+export const categoriesApi = {
+  get: () => $api.get<ICategory[]>('/categories'),
+}

@@ -1,26 +1,31 @@
-import { SimpleGrid, Center, Text } from '@mantine/core'
-import { pastProducts } from '../consts/pastProducts'
+import { SimpleGrid, Center, Text, Flex, Loader } from '@mantine/core'
 import { ProductCard } from './productCards'
-import { useEffect, useState } from 'react'
+import { useFilterProducts } from '../hooks/useProductsFilter'
+import type { TProductParams } from '../types/product'
 
-export function MappedProductCards() {
-  const [filteredType, setFilteredType] = useState(
-    localStorage.getItem('selectedType') || ''
-  )
+interface Props {
+  filterParams: TProductParams
+}
 
-  useEffect(() => {
-    const handleStorage = () => {
-      setFilteredType(localStorage.getItem('selectedType') || '')
-    }
-    window.addEventListener('storage', handleStorage)
-    return () => window.removeEventListener('storage', handleStorage)
-  }, [])
+export function MappedProductCards({ filterParams }: Props) {
+  // Agar categoryId 0 bo'lsa ('All') — uni paramsdan olib tashlaymiz
+  const params: TProductParams = { ...filterParams }
+  if (params.categoryId === 0) {
+    delete params.categoryId
+  }
 
-  const filtered = filteredType
-    ? pastProducts.filter((p) => p.category.slug === filteredType)
-    : pastProducts
+  const { data, isLoading } = useFilterProducts(params)
+  const products = data ?? []
 
-  if (filtered.length === 0) {
+  if (isLoading) {
+    return (
+      <Flex w="100%" h="100%" p="50px" justify="center">
+        <Loader color="red" />
+      </Flex>
+    )
+  }
+
+  if (products.length === 0) {
     return (
       <Center py={60}>
         <Text c="dimmed" size="lg">
@@ -32,7 +37,7 @@ export function MappedProductCards() {
 
   return (
     <SimpleGrid cols={{ base: 1, sm: 2, md: 3, lg: 4 }} spacing="xl" mt="xl">
-      {filtered.map((product) => (
+      {products.map((product) => (
         <ProductCard key={product.id} product={product} />
       ))}
     </SimpleGrid>
