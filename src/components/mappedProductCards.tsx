@@ -8,7 +8,6 @@ interface Props {
 }
 
 export function MappedProductCards({ filterParams }: Props) {
-  // Agar categoryId 0 bo'lsa ('All') — uni paramsdan olib tashlaymiz
   const params: TProductParams = { ...filterParams }
   if (params.categoryId === 0) {
     delete params.categoryId

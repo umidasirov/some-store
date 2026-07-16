@@ -10,7 +10,6 @@ export const Products = () => {
   const [priceMin, setPriceMin] = useState(0)
   const [priceMax, setPriceMax] = useState(0)
 
-  // Faqat ishlatilgan filterlarnigina paramsga qo'shamiz
   const filterParams = useMemo(() => {
     const params: Record<string, string | number> = {}
     if (categoryId !== 0) params.categoryId = categoryId
